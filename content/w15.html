@@ -2,7 +2,7 @@
         <head>
         <title>cp_hw</title>
         <meta charset="utf-8">
-<meta property="head" content="H2">
+<meta property="head" content="H3">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
@@ -141,8 +141,31 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">w15 << <a href='w15.html'>Previous</a> <a href='brython建立.html'>Next</a> >> brython建立<br /><h1>w7</h1>
-<br />w15 << <a href='w15.html'>Previous</a> <a href='brython建立.html'>Next</a> >> brython建立</div>
+    <div id="tipue_search_content">w13_hw << <a href='w13_hw.html'>Previous</a> <a href='w7.html'>Next</a> >> w7<br /><h1>w15</h1>
+<p>題目1:<a href="https://mdecp2024.github.io/hw-41323218/content/Brython.html?src=https://gist.githubusercontent.com/41323218/9eab74f4baf9b3d243ddb749f7dab18b/raw/de2a570de1a85726aebe7cc66cf71342b5f26ea2/1218.py">anchor</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># sum 初始值設為 0
+# sum 為全域變數
+sum = 0
+
+def addto(init, upto):
+    sum = 0
+    #global sum
+    #init = 1
+    #upto = 100
+    # 利用 for 重複迴圈與變數加法進行累加
+    for i in range(init, upto+1):
+        sum = sum + i
+    
+    print("從" + str(init) + "累加到" + str(upto) + "=" + str(sum))
+    
+    return sum
+
+#addto(1, 100)
+init, upto = 1, 100
+sum1_50 = addto(init, 50)
+sum51_100 = addto(51, upto)
+print("從" + str(init) + "累加到" + str(upto) + "=" + str(sum1_50 + sum51_100))</pre>
+<p></p><br />w13_hw << <a href='w13_hw.html'>Previous</a> <a href='w7.html'>Next</a> >> w7</div>
         
     <!-- footer -->
       <div class="container">
