@@ -142,7 +142,16 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">w13_hw << <a href='w13_hw.html'>Previous</a> <a href='w7.html'>Next</a> >> w7<br /><h1>w15</h1>
-<p>題目1:<a href="https://mdecp2024.github.io/hw-41323218/content/Brython.html?src=https://gist.githubusercontent.com/41323218/9eab74f4baf9b3d243ddb749f7dab18b/raw/de2a570de1a85726aebe7cc66cf71342b5f26ea2/1218.py">anchor</a></p>
+<p>題目1:<a href="https://mdecp2024.github.io/hw-41323218/content/Brython.html?src=https://gist.githubusercontent.com/41323218/9eab74f4baf9b3d243ddb749f7dab18b/raw/1f9634419aaf83acc0088d1ec6e4116eb1281334/1218-1.py">anchor</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># sum 初始值設為 0
+sum = 0
+init = 1
+upto = 100
+# 利用 for 重複迴圈與變數加法進行累加
+for i in range(init, upto+1):
+    sum = sum + i
+print("從" + str(init) + "累加到" + str(upto) + "=" + str(sum))</pre>
+<p><span>題目2:</span><a href="https://mdecp2024.github.io/hw-41323218/content/Brython.html?src=https://gist.githubusercontent.com/41323218/9eab74f4baf9b3d243ddb749f7dab18b/raw/1f9634419aaf83acc0088d1ec6e4116eb1281334/1218-2.py">addto</a></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># sum 初始值設為 0
 # sum 為全域變數
 sum = 0
@@ -164,6 +173,57 @@ def addto(init, upto):
 init, upto = 1, 100
 sum1_50 = addto(init, 50)
 sum51_100 = addto(51, upto)
+print("從" + str(init) + "累加到" + str(upto) + "=" + str(sum1_50 + sum51_100))</pre>
+<p><span>題目3:</span><a href="https://mdecp2024.github.io/hw-41323218/content/Brython.html?src=https://gist.githubusercontent.com/41323218/9eab74f4baf9b3d243ddb749f7dab18b/raw/1f9634419aaf83acc0088d1ec6e4116eb1281334/1218-3.py">add_only_even</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># sum 初始值設為 0
+# sum 為全域變數
+sum = 0
+
+def add_only_even(init, upto):
+    sum = 0
+    #global sum
+    #init = 1
+    #upto = 100
+    # 利用 for 重複迴圈與變數加法進行累加
+    for i in range(init, upto+1):
+        if i % 2 == 0:  # 檢查是否為偶數
+            sum = sum + i
+    
+    print("從" + str(init) + "累加到" + str(upto) + "=" + str(sum))
+    
+    return sum
+
+#add_only_even(1, 100)
+init, upto = 1, 100
+sum1_50 = add_only_even(init, 50)
+sum51_100 = add_only_even(51, upto)
+print("從" + str(init) + "累加到" + str(upto) + "=" + str(sum1_50 + sum51_100))</pre>
+<p><span>題目4:</span><a href="https://mdecp2024.github.io/hw-41323218/content/Brython.html?src=https://gist.githubusercontent.com/41323218/9eab74f4baf9b3d243ddb749f7dab18b/raw/1f9634419aaf83acc0088d1ec6e4116eb1281334/1218-4.py">add_avoid_8</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># sum 初始值設為 0
+# sum 為全域變數
+sum = 0
+
+def add_avoid_8(init, upto):
+    sum = 0
+    #global sum
+    #init = 1
+    #upto = 100
+    # 利用 for 重複迴圈與變數加法進行累加
+    # 遍歷從 init 到 upto 的所有數字
+    for i in range(init, upto + 1):
+        if i % 2 == 0:  # 檢查是否為偶數
+            if '8' in str(i):  # 檢查該數字中是否包含 '8'
+                continue  # 如果包含 '8'，跳過這個數字
+            sum = sum + i  # 否則進行加總
+    
+    print("從" + str(init) + "累加到" + str(upto) + "，避開數字包含'8'的總和是: " + str(sum))
+    
+    return sum
+
+#add_avoid_8(1, 100)
+init, upto = 1, 100
+sum1_50 = add_avoid_8(init, 50)
+sum51_100 = add_avoid_8(51, upto)
 print("從" + str(init) + "累加到" + str(upto) + "=" + str(sum1_50 + sum51_100))</pre>
 <p></p><br />w13_hw << <a href='w13_hw.html'>Previous</a> <a href='w7.html'>Next</a> >> w7</div>
         
